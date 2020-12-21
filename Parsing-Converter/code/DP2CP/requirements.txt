@@ -1,0 +1,1 @@
+stanfordnlp==0.2.0

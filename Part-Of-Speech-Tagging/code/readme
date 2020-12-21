@@ -1,0 +1,45 @@
+# Contributors:
+- Shubham Nemani - 203050011
+- Pooja Verma - 203050072
+- Anish M M - 203050066
+
+# POS tagger models implemented:
+- Hidden Markov Model (HMM)
+- Support Vector Machine Classifier (SVM)
+- Bidirectional Long Short-Term Memory (BiLSTM)
+
+# Usage instructions
+run using shell file as follows:
+
+    bash run.sh model
+
+example:
+    bash run.sh hmm
+    (will print output to stdout and write it to file output_hmm.txt)
+
+or, use directly as follows:
+
+    usage: NLTK_DATA='./data' python3 main.py [-h] model
+    
+    Perform pos-tagging using various models.
+    
+    positional arguments:
+      model       Pos tagger to use: one of {hmm, svm, bilstm}
+    
+    optional arguments:
+      -h, --help  show this help message and exit
+
+
+Example: (run from root folder of the project.)
+
+    NLTK_DATA='./data' python3 main.py bilstm
+
+will run bilstm with all the default parameters.
+
+# Packages required:
+	gensim (for word2vec used in svm, bilstm)
+	sklearn (for svm)
+	tensorflow, keras (bi_lstm)
+
+Data to run on is shipped with (in ./data folder.)
+
